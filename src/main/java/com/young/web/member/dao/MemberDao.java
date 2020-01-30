@@ -4,4 +4,5 @@ import com.young.web.member.model.MemberVO;
 
 public interface MemberDao {
 	public int insertMember(MemberVO memberVO);
+	public MemberVO getMember(String userid);
 }
