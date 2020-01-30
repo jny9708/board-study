@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +9,11 @@
 </head>
 <body>
 
-
-<form action="<c:url value="/member/add"/>" method="POST">
-	아이디 : <input type="text"/>
-	비밀번호 : <input type="text"/>
-	이메일 : <input type="text"/>
-	<button type="submit"></button>
+<form method="POST" action="<c:url value="/member/add"/>">
+	아이디 : <input name="userid" type="text"/><p>
+	비밀번호 : <input name="password" type="password"/><p>
+	이메일 : <input name="email" type="text"/><p>
+	<button type="submit">회원가입</button>
 </form>
 </body>
 </html>

@@ -27,12 +27,8 @@ public class MemberController {
 	
 	@RequestMapping(value="/add" ,method=RequestMethod.POST)
 	public String addMember(MemberVO memberVO) {
-		
-		logger.info(""+memberVO.getUserid());
 		memberService.insertMember(memberVO);
-		
-		//logger.info(""+userid);
-		return "login";
+		return "redirect:/";
 	}
 
 }
