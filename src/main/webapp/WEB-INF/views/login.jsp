@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Login</title>
 </head>
+
 <script>
 
 	function loginButtonClick(){
@@ -16,10 +17,12 @@
 
 </script>
 <body>
-	<form action="/login" method="POST">
-		<input name="id">
-		<input name="password">
-		<button type="submit" onclick="loginButtonClick()">로그인</button>
+	<form action="<c:url value="/login"/>" method="POST">
+		아이디 : <input name="id"> <p>
+		비밀번호 : <input name="password"><p>
+		<button type="submit" >로그인</button>
 	</form>
+	
+	
 </body>
 </html>
